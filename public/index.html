@@ -27,8 +27,12 @@
         <link rel="stylesheet" href="style.css">
 
     <!--Favicon -->
-        <link href="./assets/chess-knight-512-253889.png" rel="icon" type="image/jpg" >
+        <link href="./assets/chess-knight-512-253889.png" rel="icon" type="image/jpg">
 
+    <!-- Fonts -->
+
+    <link href="https://fonts.googleapis.com/css?family=Aladin|Andika|Arima+Madurai|Arsenal|Bellefair|Bungee+Outline|Cherry+Cream+Soda|Combo|Cormorant|Englebert|Federo|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|Irish+Grover|Lakki+Reddy|Love+Ya+Like+A+Sister|McLaren|Metal+Mania|Mirza|Mouse+Memoirs|Neucha|Oranienbaum|Peralta|Pompiere|Port+Lligat+Sans|Risque|Salsa|Shojumaru|Skranji|Special+Elite|Voltaire|Zilla+Slab" rel="stylesheet">
+    
     <title>Piqued</title>
 
   </head>
@@ -48,20 +52,20 @@
       <a class="navbar-brand" href="#"><img src="./assets/SmallLogoBWEDD.jpg" alt="Piqued: Passion to Purpose"></a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#parents" style="color: #f4bf42;">Parents</a>
+          <a class="nav-link disabled" href="#parents" style="color: #331f00;">Parents</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#teachers" style="color: #f4bf42;">Teachers</a>
+          <a class="nav-link disabled" href="#teachers" style="color: #331f00;">Teachers</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#youth" style="color: #f4bf42;">Youth</a>
+          <a class="nav-link disabled" href="#youth" style="color: #331f00;">Youth</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #f4bf42;">About</a>
+          <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #331f00;">About</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
           <div ng-if="ctrl.loggedIn==false" id="authForms">
-            <a ng-click="ctrl.displayReg=!ctrl.displayReg" class="nav-link"  id="reg" style="color: #f4bf42;">Register</a>
+            <a ng-click="ctrl.displayReg=!ctrl.displayReg" class="nav-link"  id="reg" style="color: #331f00;">Register</a>
             <div ng-if="ctrl.displayReg==true">
               <form ng-submit="ctrl.createUser(userPass)">
                 <input type="text" ng-model="userPass.username" placeholder="username"/>
@@ -73,7 +77,7 @@
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
           <div ng-if="ctrl.loggedIn==false" id="authForms">
-            <a ng-click="ctrl.displayLog=!ctrl.displayLog" class="nav-link" id="reg" style="color: #f4bf42;">Login</a>
+            <a ng-click="ctrl.displayLog=!ctrl.displayLog" class="nav-link" id="reg" style="color: #331f00;">Login</a>
             <div ng-if="ctrl.displayLog==true">
               <form ng-submit="ctrl.login(userPass);">
                 <input type="text" ng-model="userPass.username" placeholder="username"/>
@@ -85,7 +89,7 @@
         </li>
       </ul>
       <div ng-if="ctrl.loggedIn==true" id="logoutDiv">
-        <p style="color: #f4bf42;">  Piqued user {{ ctrl.user.username }} </p>
+        <p style="color: #331f00;">  Piqued user {{ ctrl.user.username }} </p>
         <a ng-click="ctrl.logout();" id="logout">Log Out</a>
       </div>
     </div>
@@ -106,6 +110,52 @@
     </div>
 
 
+
+
+    <!-- BGG Hot Games List Thumbnail API Carousel  -->
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="article in ctrl.hotgames.games | limitTo:10">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+          <div class="carousel-item">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <br><br>
   </body>
 
 

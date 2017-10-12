@@ -37,7 +37,7 @@ const constroller = this;
         method: 'GET',
         url: 'https://bgg-json.azurewebsites.net/hot'
       }).then(function(response) {
-        // controller.hotgames = response.data;
+        this.hotgames = response.data;
         console.log(response);
       })
     };
