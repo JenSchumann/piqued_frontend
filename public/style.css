@@ -2,3 +2,104 @@
   border: 1px solid hotpink;
   /*background-color: #39487f;*/
 }
+
+body {
+  background: #fff5e6;
+  font-family: 'Zilla Slab', serif;
+  /*font-size: 5em;*/
+
+}
+
+.loginContainer_small{
+  border: 1px solid #fff7e6;
+  padding: .3em;
+  background-color: #ffaa00;
+}
+
+#mainNav{
+  height: 40%;
+  background: linear-gradient(to right, rgba(255, 153, 0, 1) 0%, rgba(255, 184, 77, 0.85) 19%, rgba(255, 204, 128, 0.42) 75%, rgba(255, 224, 179,0.42) 91%);
+  color: #331f00;
+}
+
+.navbar li {
+  margin: 0 auto;
+  color: #331f00;
+}
+
+.nav-link disabled a {
+  color: #331f00;
+}
+
+#logout {
+  color: #cc8800;
+  font-weight: bold;
+  list-style: none;
+  text-decoration: none;
+}
+
+#logoutDiv {
+  float: right;
+}
+
+.about {
+  font-family: 'Oranienbaum', serif;
+  font-size: 20px;
+  /*background-color: rgba(255, 255, 255, 0.3);*/
+  height: 70%;
+  padding: 10%;
+  margin-top: 10%;
+  position: absolute;
+  color: #331f00;
+}
+
+.carousel {
+  height: 30%;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 2em;
+}
+
+/*156, 230*/
+#Modal {
+-webkit-box-shadow: 71px 24px 59px 16px rgba(255, 224, 179, 0.59);
+-moz-box-shadow: 71px 24px 59px 16px rgba(255, 173, 51, 0.59);
+box-shadow: 71px 24px 59px 16px rgba(255, 224, 179, 0.59);
+font-family: 'Special Elite', cursive;
+}
+
+ul {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*/////////////////////////*/
+
+/*media query.. for now*/
+
+/*////////////////////////*/
+
+@media only screen and (max-width: 992px) {
+  .navbar {
+    display: block;
+  }
+
+  #navbarTogglerDemo01 {
+    display: inline-block;
+    color: #331f00;
+  }
+
+  .carousel {
+    padding-top: 10%;
+  }
+
+}
