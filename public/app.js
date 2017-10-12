@@ -11,6 +11,9 @@ const constroller = this;
   this.message = "this controller works";
   this.url = 'http://localhost:3000';
 
+  $scope.toggleAboutModal = function() {
+      $scope.modalShown1 = !$scope.modalShown1;
+    };
 
 
 
