@@ -5,18 +5,43 @@ const app = angular.module('piqued', []);
 
 //main controller
 app.controller('pqdController', ['$http', '$scope', function($http, $scope) {
-  //$scope.modalShown = false;
+  $scope.modalShown1 = false;
 
 const constroller = this;
   this.message = "this controller works";
   this.url = 'http://localhost:3000';
 
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+
+  //modal section
+
+//////////////////////////////////////////////////////////////////////////
+
   $scope.toggleAboutModal = function() {
       $scope.modalShown1 = !$scope.modalShown1;
     };
 
+//////////////////////////////////////////////////////////////////////////
 
+  //BGG api section to get list of hot games list
 
+//////////////////////////////////////////////////////////////////////////
+
+    this.getHotGames = function() {
+      $http({
+        method: 'GET',
+        url: 'https://bgg-json.azurewebsites.net/hot'
+      }).then(function(response) {
+        // controller.hotgames = response.data;
+        console.log(response);
+      })
+    };
+    this.getHotGames();
 
 
 
