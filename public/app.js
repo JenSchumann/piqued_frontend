@@ -88,7 +88,7 @@ this.logout = function() {
 //////////////////////////////////////////////////////////////////////////
 
   //modal section
-  //should create one toggle so once one is clicked another one is hidden if it was being displayed
+  //should create one toggle so once one is clicked another one is hidden if it was being displayed - maybe as an ng-hide of the other modals is best
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -102,6 +102,10 @@ this.logout = function() {
 
   $scope.toggleParentModal = function() {
       $scope.modalShown3 = !$scope.modalShown3;
+  }
+
+  $scope.toggleContactModal = function() {
+      $scope.modalShown4 = !$scope.modalShown4;
   }
 
 //////////////////////////////////////////////////////////////////////////
