@@ -88,6 +88,7 @@ this.logout = function() {
 //////////////////////////////////////////////////////////////////////////
 
   //modal section
+  //should create one toggle so once one is clicked another one is hidden if it was being displayed
 
 //////////////////////////////////////////////////////////////////////////
 
@@ -97,6 +98,10 @@ this.logout = function() {
 
   $scope.toggleTeacherModal = function() {
       $scope.modalShown2 = !$scope.modalShown2;
+  }
+
+  $scope.toggleParentModal = function() {
+      $scope.modalShown3 = !$scope.modalShown3;
   }
 
 //////////////////////////////////////////////////////////////////////////
