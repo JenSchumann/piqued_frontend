@@ -52,7 +52,7 @@
       <a class="navbar-brand" href="#"><img src="./assets/SmallLogoBWEDD.jpg" alt="Piqued: Passion to Purpose"></a>
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#parents" style="color: #331f00;">Parents</a>
+          <a ng-click="toggleParentModal()"class="nav-link disabled" href="#parents" style="color: #331f00;">Parents</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
           <a ng-click="toggleTeacherModal()" class="nav-link disabled" style="color: #331f00;">Teachers</a>
@@ -63,13 +63,15 @@
         <li class="btn btn-sm align-middle btn-outline-light">
           <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #331f00;">About</a>
         </li>
+        <li class="btn btn-sm align-middle btn-outline-light">
+          <a ng-click="toggleContactModal()" class="nav-link disabled" style="color: #331f00;">Contact</a>
+        </li>
 
 
         <li class="btn btn-sm align-middle btn-outline-light">
           <div ng-if="ctrl.loggedIn==false" id="authForms">
             <a ng-click="ctrl.displayReg=!ctrl.displayReg" class="nav-link"  id="reg" style="color: #331f00;">Register</a>
             <div ng-if="ctrl.displayReg==true">
-
               <form ng-submit="ctrl.createUser(userPass)">
                 <input type="text" ng-model="userPass.username" placeholder="username"/>
                 <input type="password" ng-model="userPass.password" placeholder="password"/>
@@ -91,10 +93,10 @@
                 <input type="password" ng-model="userPass.password" placeholder="Password"/>
                 <input class="btn btn-dark" type="submit"/>
               </form>
-
             </div>
             </div>
         </li>
+
       </ul>
 
       <div ng-if="ctrl.loggedIn==true" id="logoutDiv">
@@ -118,6 +120,22 @@
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
+  <!--  modal section (parents) -->
+  <div class="parentModal" id="Modal">
+    <modal-dialog show='modalShown3' width='750px' height='60%'>
+      <div id="Modal">
+        <h2 class="piquedH2">Piqued About Parenting Adolescents?</h2>
+        <p class="parents">
+          Do you feel disconnected or out-of-touch with your gifted adolescent? <br><br>
+          Are you searching for ways to have meaningful interactions with your pre-teen or teenager?<br><br>
+          This parent resource hub brings together ideas, resources, and a discussion community to help parents feel more connected to their adolescents, and their adolescents' learning experience in a way that provides meaningful guidance while nurturing family relationships!
+
+          Check out the Piqued Parent hub by clicking <a href="./parents.html">here.</a>
+
+        </p>
+      </div>
+    </modal-dialog>
+  </div>
 
   <!--  modal section (about) -->
     <div class="aboutModal" id="Modal">
@@ -140,14 +158,13 @@
         <modal-dialog show='modalShown2' width='750px' height='60%'>
           <div id="Modal">
             <h2 class="piquedH2">Are Your Learners Piqued About Learning?</h2>
-            <p class="about">
+            <p class="teachers">
               How do you tie curriculum content to applied learning experiences in a way that is meaningful for your students? <br><br>
               How do you ignite curiosity in such a way that learners are engaged in a discussion about the topics at hand in an authentic manner?<br><br>
               This teacher resource hub brings together ideas, resources, and a discussion community for utilizing strategic play experiences along with brain based learning approaches to facilitate a process of playful tinkering towards passion and purpose!
 
               Check out the Piqued Teacher hub by clicking <a href="./teachers.html">here.</a>
 
-              <!-- <section id="teachers" ng-include="'./teachers.html'"></section> -->
             </p>
           </div>
         </modal-dialog>
