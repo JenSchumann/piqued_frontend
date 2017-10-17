@@ -95,6 +95,10 @@ this.logout = function() {
       $scope.modalShown1 = !$scope.modalShown1;
     };
 
+  $scope.toggleTeacherModal = function() {
+      $scope.modalShown2 = !$scope.modalShown2;
+  }
+
 //////////////////////////////////////////////////////////////////////////
 
   //BGG api section to get list of hot games list

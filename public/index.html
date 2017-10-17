@@ -55,7 +55,7 @@
           <a class="nav-link disabled" href="#parents" style="color: #331f00;">Parents</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#teachers" style="color: #331f00;">Teachers</a>
+          <a ng-click="toggleTeacherModal()" class="nav-link disabled" style="color: #331f00;">Teachers</a>
         </li>
         <li class="btn btn-sm align-middle btn-outline-light">
           <a class="nav-link disabled" href="#youth" style="color: #331f00;">Youth</a>
@@ -98,7 +98,7 @@
       </ul>
 
       <div ng-if="ctrl.loggedIn==true" id="logoutDiv">
-        <p style="color: #331f00;">  Piqued user: {{ ctrl.user.username }} </p>
+        <p style="color: #331f00;">  Piqued Member: {{ ctrl.user.username }} </p>
         <a ng-click="ctrl.logout();" id="logout">Log Out</a>
       </div>
     </div>
@@ -119,7 +119,7 @@
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
 
-  <!--  modal section -->
+  <!--  modal section (about) -->
     <div class="aboutModal" id="Modal">
       <modal-dialog show='modalShown1' width='750px' height='60%'>
         <div id="Modal">
@@ -127,13 +127,33 @@
           <p class="about">
             How difficult is it for you to arouse the curiosity of your gifted-talented adolescent about learning and the "S" word? <br><br>
             Piqued is here to give you an "in" to have that conversation about your adolesent(s) learning style, strengths, interests, and passions.<br><br>
-            Please add to this learning community by posting comments about how using a game-based approach in this way has impacted youth you interact with!
+            Please add to this learning community by posting comments about how using a game-based approach in this way has impacted youth you interact with!<br><br>
+
+            <!-- link to discussion forum page here -->
           </p>
         </div>
       </modal-dialog>
     </div>
 
+    <!--  modal section (teachers) -->
+      <div class="teacherModal" id="Modal">
+        <modal-dialog show='modalShown2' width='750px' height='60%'>
+          <div id="Modal">
+            <h2 class="piquedH2">Are Your Learners Piqued About Learning?</h2>
+            <p class="about">
+              How do you tie curriculum content to applied learning experiences in a way that is meaningful for your students? <br><br>
+              How do you ignite curiosity in such a way that learners are engaged in a discussion about the topics at hand in an authentic manner?<br><br>
+              This teacher resource hub brings together ideas, resources, and a discussion community for utilizing strategic play experiences along with brain based learning approaches to facilitate a process of playful tinkering towards passion and purpose!
 
+              Check out the Piqued Teacher hub by clicking <a href="./teachers.html">here.</a>
+
+              <!-- <section id="teachers" ng-include="'./teachers.html'"></section> -->
+            </p>
+          </div>
+        </modal-dialog>
+      </div>
+
+<!-- /////////////////////////////////////////////////////////////////////// -->
 
     <!-- BGG Hot Games List Thumbnail API Carousel  -->
       <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
