@@ -247,13 +247,13 @@
 <!-- /////////////////////////////////////////////////////////////////////// -->
 
     <!-- BGG Hot Games List Thumbnail API Carousel  -->
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-          <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="article in ctrl.hotgames.games | limitTo:10">
-            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+          <div class="carousel-item" ng-class="{active:!$index}" ng-repeat="hotgame in ctrl.hotgames | limitTo:10">
+            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{hotgame.thumbnail}}" alt="{{hotgame.name}}"></a>
           </div>
           <div class="carousel-item">
-            <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
+            <a href="{{hotgame.url}}" target="_blank"><img class="d-block w-100" ng-src="{{hotgame.thumbnail}}" alt="{{hotgame.name}}"></a>
           </div>
           <div class="carousel-item">
             <a href="{{game.url}}" target="_blank"><img class="d-block w-100" ng-src="{{game.thumbnail}}" alt="{{game.name}}"></a>
@@ -289,11 +289,9 @@
           <span class="sr-only">Next</span>
         </a>
       </div>
-      <br><br>
-  </body>
+      <br><br> -->
 
-
-
+</body>
 
 
 <!-- piqued logo to use: ./assets/original-logos-2017-Feb-6149-589bd24b27551 (1).jpg -->

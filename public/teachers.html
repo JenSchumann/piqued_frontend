@@ -1,12 +1,98 @@
 <section id="teachers">
 
-<p>teacher page talking here</p>
+  <!DOCTYPE html>
+  <html ng-app="piqued">
+    <head>
+      <meta charset="utf-8">
+
+      <!--JScript Libraries-->
+
+      <!--JQuery-->
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+      <!-- Angular  -->
+          <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+
+      <!-- Piqued JScript -->
+          <script type="text/javascript" src="app.js"></script>
+
+      <!--Stylesheets-->
+
+      <!-- Bootstrap -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+      <!--Piqued Stylesheet-->
+          <link rel="stylesheet" href="style.css">
+
+      <!--Favicon -->
+          <link href="./assets/chess-knight-512-253889.png" rel="icon" type="image/jpg">
+
+      <!-- Fonts -->
+
+      <link href="https://fonts.googleapis.com/css?family=Aladin|Andika|Arima+Madurai|Arsenal|Bellefair|Bungee+Outline|Cherry+Cream+Soda|Combo|Cormorant|Englebert|Federo|IM+Fell+DW+Pica+SC|IM+Fell+English+SC|Irish+Grover|Lakki+Reddy|Love+Ya+Like+A+Sister|McLaren|Metal+Mania|Mirza|Mouse+Memoirs|Neucha|Oranienbaum|Peralta|Pompiere|Port+Lligat+Sans|Risque|Salsa|Shojumaru|Skranji|Special+Elite|Voltaire|Zilla+Slab" rel="stylesheet">
+
+      <title>Piqued</title>
+
+    </head>
+
+
+    <body ng-controller="pqdController as ctrl">
+      <!-- {{ctrl.message}}
+       <h1>Piqued</h1> -->
+
+      <!-- navbar -->
+
+      <nav class="navbar navbar-expand-lg" id=mainNav>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#"><img src="./assets/SmallLogoBWEDD.jpg" alt="Piqued: Passion to Purpose"></a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a class="nav-link disabled" href="/index.html" style="color: #331f00;">Home</a>
+          </li>
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a ng-click="ctrl.logout();" class="nav-link disabled" id="logout" style="color: #331f00;">Log Out</a>
+          </li>
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a class="nav-link disabled" href="#youth" style="color: #331f00;">Youth</a>
+          </li>
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a href="#forums" class="nav-link disabled" style="color: #331f00;">Forums</a>
+          </li>
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #331f00;">About</a>
+          </li>
+          <li class="btn btn-sm align-middle btn-outline-light">
+            <a ng-click="toggleContactModal()" class="nav-link disabled" style="color: #331f00;">Contact</a>
+          </li>
+
+</nav>
+
+
+<!-- update: (here as modal???)--> 
+<h1>Would you like to share a resource?  Click <a href="#">here.</a></h1>
+<h2>Share resources, compose posts, comment on shared resources.</h2>
+
+
 <!-- for extensive content teacher must create an account?
 ng-if="ctrl.loggedin" ng-hide="!ctrl.loggedin" -->
+
+<!-- nav ideas: sternberg theory of successful intelligence
+nav ideas: multiple intelligence ideas
+nav ideas: strengths based learning  -->
+
 
 <!-- link ideas:
 freebee lessons tied to affective learning
 
+
 freebee lessons tied to executive learning
+
 
 specific posts tied to games -->
