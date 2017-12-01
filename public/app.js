@@ -119,7 +119,7 @@ this.logout = function() {
         method: 'GET',
         url: 'https://bgg-json.azurewebsites.net/hot'
       }).then(function(response) {
-        this.hotgames = response.data;
+        // this.hotgames = response.data;
         console.log(response);
       })
     };
@@ -163,6 +163,11 @@ this.logout = function() {
 //end of pqdController
 }]);
 
+// app.controller('teacherController', ['$http', '$scope', function($http, $scope) {
+
+
+//end of teacherController
+// }]);
 
 app.directive('modalDialog', function() {
   return {
