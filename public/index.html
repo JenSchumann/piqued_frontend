@@ -39,75 +39,13 @@
 
 
   <body ng-controller="pqdController as ctrl">
+
     <!-- {{ctrl.message}}
      <h1>Piqued</h1> -->
 
-    <!-- navbar -->
+     <!-- navbar -->
+     <section id="nav" ng-include="'./nav.html'"></section>
 
-    <nav class="navbar navbar-expand-lg" id=mainNav>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-      <a class="navbar-brand" href="#"><img src="./assets/SmallLogoBWEDD.jpg" alt="Piqued: Passion to Purpose"></a>
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a ng-click="toggleParentModal()"class="nav-link disabled" href="#parents" style="color: #331f00;">Parents</a>
-        </li>
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a ng-click="toggleTeacherModal()" class="nav-link disabled" style="color: #331f00;">Teachers</a>
-        </li>
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a class="nav-link disabled" href="#youth" style="color: #331f00;">Youth</a>
-        </li>
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a href="#forums" class="nav-link disabled" style="color: #331f00;">Forums</a>
-        </li>
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #331f00;">About</a>
-        </li>
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <a ng-click="toggleContactModal()" class="nav-link disabled" style="color: #331f00;">Contact</a>
-        </li>
-
-
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <div ng-if="ctrl.loggedIn==false" id="authForms">
-            <a ng-click="ctrl.displayReg=!ctrl.displayReg" class="nav-link"  id="reg" style="color: #331f00;">Register</a>
-            <div ng-if="ctrl.displayReg==true">
-              <form ng-submit="ctrl.createUser(userPass)">
-                <input type="text" ng-model="userPass.username" placeholder="username"/>
-                <input type="password" ng-model="userPass.password" placeholder="password"/>
-                <input class="btn btn-dark" type="submit"/>
-              </form>
-
-            </div>
-          </div>
-        </li>
-
-
-        <li class="btn btn-sm align-middle btn-outline-light">
-          <div ng-if="ctrl.loggedIn==false" id="authForms">
-            <a ng-click="ctrl.displayLog=!ctrl.displayLog" class="nav-link" id="reg" style="color: #331f00;">Login</a>
-            <div ng-if="ctrl.displayLog==true">
-
-              <form ng-submit="ctrl.login(userPass);">
-                <input type="text" ng-model="userPass.username" placeholder="Username"/>
-                <input type="password" ng-model="userPass.password" placeholder="Password"/>
-                <input class="btn btn-dark" type="submit"/>
-              </form>
-            </div>
-            </div>
-        </li>
-
-      </ul>
-
-      <div ng-if="ctrl.loggedIn==true" id="logoutDiv">
-        <p style="color: #331f00;">  Piqued Member: {{ ctrl.user.username }} </p>
-        <a ng-click="ctrl.logout();" id="logout">Log Out</a>
-      </div>
-    </div>
-  </nav>
 
 <!-- /////////////////////////////////////////////////////////////////////// -->
 <!-- to see all logged in users: (for admin capability later) -->

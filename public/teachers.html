@@ -44,38 +44,11 @@
       <!-- {{ctrl.message}}
        <h1>Piqued</h1> -->
 
-      <!-- navbar -->
-
-      <nav class="navbar navbar-expand-lg" id=mainNav>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" href="#"><img src="./assets/SmallLogoBWEDD.jpg" alt="Piqued: Passion to Purpose"></a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a class="nav-link disabled" href="/index.html" style="color: #331f00;">Home</a>
-          </li>
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a ng-click="ctrl.logout();" class="nav-link disabled" id="logout" style="color: #331f00;">Log Out</a>
-          </li>
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a class="nav-link disabled" href="#youth" style="color: #331f00;">Youth</a>
-          </li>
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a href="#forums" class="nav-link disabled" style="color: #331f00;">Forums</a>
-          </li>
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a ng-click="toggleAboutModal()" class="nav-link disabled" style="color: #331f00;">About</a>
-          </li>
-          <li class="btn btn-sm align-middle btn-outline-light">
-            <a ng-click="toggleContactModal()" class="nav-link disabled" style="color: #331f00;">Contact</a>
-          </li>
-
-</nav>
+     <!-- navbar -->
+     <section id="nav" ng-include="'./nav.html'"></section>
 
 
-<!-- update: (here as modal???)--> 
+<!-- update: (here as modal???)-->
 <h1>Would you like to share a resource?  Click <a href="#">here.</a></h1>
 <h2>Share resources, compose posts, comment on shared resources.</h2>
 
